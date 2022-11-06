@@ -7,15 +7,26 @@
   
   body {
     font-family: sans-serif;
-    padding: 50px 0;
+    padding-top: 50px;
   }
   i{
     margin: 0px 4px;
+    font-size: small;
+  }
+  s{
+    font-size: x-small;
+  }
+  p{
+    padding:0 5px;
+    font-size: medium;
   }
   img{
-    display: block;
     max-width: 100%;
   }
+  span{
+    font-size: small;
+  }
+ 
   header {
     color: white;
     width: 100%;
@@ -76,25 +87,32 @@
   .colum{
     flex-basis: calc(100%/3);
     min-height: 200px;
-    border: 1px dashed black;
+    margin-bottom: 30px;
+  }
+  .visibile{
+    display: block;
+  }
+  .scomparsa{
+    display: none;
   }
 .sconto{
+    background-color: red;
+}
+
+.label{
     font-size:x-small;
     color: white;
-    background-color: red;
     padding: 3px 8px;
     position: absolute;
-    bottom:40px;
     left:0;
+    bottom: 90px;
 }
 .sostenibilità{
-    font-size:x-small;
-    color: white;
-    background-color: green;
-    padding: 3px 8px;
-    position: absolute;
-    bottom:40px;
+    bottom:90px;
     left:42px; 
+}
+.green-sos{
+    background-color: green;
 }
 .q-favorite{
     background-color: white;
@@ -102,28 +120,82 @@
     width: 30px;
     font-size: 24px;
     position: absolute;
-    top:42px;
+    top:5px;
     right:0;  
     cursor: pointer;
 }
 .favorite{ 
-    font-size: 25px;
+    font-size: 20px;
     position: absolute;
-    top:0;
-    right:0;
+    top:1px;
+    right:0px;
     width: 100%;
     text-align: center;
 }
 
 .q-favorite:hover ::after{
     color:red;
-    font-size: 25px;
+    font-size: 20px;
     position: absolute;
-    top:0;
-    right:0;
+    top:1px;
+    right:0px;
     width: 100%;
     text-align: center;
     content: '\2665';
 }
+.marchio{
+    font-size:small;
+    color: gray;
+}
+.p-attuale {
+    color: red;
+    font-size: x-small;
+    font-weight: bold;
+}
+.card:hover .visibile{
+display:none;
+}
+.card:hover .scomparsa{
+    display: block;
+}
+  footer{
+    background-color: black;
+    color: white;
+    padding: 15px;
+  }
+.container-footer {
+    display:flex;
+    margin: 0 auto;
+    max-width: 900px;
+    background-color:black;
+    justify-content: space-between;
+  }
+  .footer-menu{
+    display: flex;
+    flex-direction: column;
+  }
 
+  .footerbar-actions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footerbar-loghi{
+    display:flex;
+    justify-content: center;
+  }
   
+  .footer-menu ul{
+    list-style-type: none;
+    display: flex;
+    justify-content:flex-start;
+  }
+  .footer-menu li{
+    margin: 5px;
+  }
+  .footer-menu a{
+    text-decoration: none;
+    color: white;
+    font-size: small;
+    display: block;
+  }
